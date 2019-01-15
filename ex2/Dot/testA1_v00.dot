@@ -1,0 +1,30 @@
+digraph testA1 {
+	node [
+		fontname  = "Arial bold" 
+		fontsize  = "14"
+		fontcolor = "red"
+		style     = "rounded, filled"
+		shape     = "record"
+		fillcolor = "grey90"
+		color     = "blue"
+		width     = "2"
+	]
+
+	edge [
+		color     = "blue"
+	]
+
+e [label = "{<c> e | { <g> | <d>}}"];
+e:g -> c;
+c [label = "{<c> c | { <g> | <d>}}"];
+c [label = "{<c> c | { <g> | <d> NULL}}"];
+c:g -> a;
+a [label = "{<c> a | { <g> | <d>}}"];
+a [label = "{<c> a | { <g> NULL | <d> NULL}}"];
+e:d -> r;
+r [label = "{<c> r | { <g> | <d>}}"];
+r [label = "{<c> r | { <g> | <d> NULL}}"];
+r:g -> n;
+n [label = "{<c> n | { <g> | <d>}}"];
+n [label = "{<c> n | { <g> NULL | <d> NULL}}"];
+}
